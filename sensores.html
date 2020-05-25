@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+<head>
+	<meta charset="utf-8">
+	<!--CSS Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--CSS personalido-->
+	<link rel="stylesheet" type="text/css" href="css/diseño.css">
+	<!--Font Awesome para los iconos del navbar-->
+    <script src="https://kit.fontawesome.com/b1414e9ac0.js" crossorigin="anonymous"></script>
+	<!--jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- ............................................................. -->
+	<title>Registro de Sensores</title>
+	<!-- ............................................................. -->
+	<!-- Barra de Navegacion -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--navbar-light bg-light para blanco-->
+      <a class="navbar-brand" href="index.html"><span class="fas fa-assistive-listening-systems"> Noise Pollution Monitoring</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> <!--ml-auto para pasar los elementos a la derecha del todo-->
+         <li class="nav-item active">
+          <a class="nav-link" href="index.html"><span class="fa fa-home">  Inicio</span></a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#"><span class="far fa-address-card">  Registro</span></a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="info.html"><span class="fas fa-concierge-bell">  Información</span></a>
+         </li>
+        </ul>
+       </div>
+     </nav>
+</head>
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+<body>
+ <!-- ============================================================== -->
+  <section>
+ 	 <aside>
+ 		 <div id="DivRegistro">
+	 	  <form id="formRegist" method="POST" >
+	 		<div id="formReg">
+	 			<label id="fmRegTitle">Formulario de Sensor</label>
+	 			<hr id="fmseparador" />
+	 			<!-- ============================================================== -->
+	 			<label for="idsen" id="lbl1">ID del Sensor:</label>
+	 			 <br>
+	      		<input type="text" name="idsen" id="inpt1" required>
+	      		 <br><br>
+	      		<label for="namesen" id="lbl2">Nombre del Sensor:</label>
+	     		 <br>
+	     		<input type="text" name="namesen" id="inpt2">
+	     		 <br><br>
+	            <label for="ubicsen" id="lbl3">Ubicación del Sensor:</label>
+	      		 <br>
+	      		<input type="text" name="ubicsen" id="inpt3">
+	      		 <br><br>
+	      		<!-- ============================================================== -->
+	      		<div id="msjErrores"> <!-- Espacio para la "NOTA" en el formulario -->
+	      		  <table>
+	      		  	<tr>
+	      		  		<td><i class="fas fa-exclamation-triangle fa-lg" style="color: white;"></i></td>
+	      		  		<td id="tbErrors" style="font-size: 12px; color: white; text-align: justify;">
+	      		  			Nota: Para las operaciones de "Modificar" y "Eliminar" se requiere ingresar únicamente
+	      		  			el ID del sensor al cual se le va a realizar la acción.
+	      		  		</td>
+	      		  	</tr>
+	      		  </table>
+	      		</div>
+	      		<!-- ============================================================== -->
+	 		</div>
+	 			<div id="contenderBtns"> <!-- Botones formulario registro -->
+	 			<button id="btnEnviar">Enviar</button>
+	 			<button id="btnModificar">Modificar</button>
+	 			<button id="btnEliminar">Eliminar</button>
+	 		</div>	
+	 	  </form>
+	 	 </div>
+	  </aside>
+	  <!-- ============================================================== -->
+ 	  <article>
+ 		 	<div id="DivBuscar">
+				<label for="search" id="lblb">Buscar: </label>
+				<input type="text" name="search" id="valsearch" required>
+				<button id="btnBuscar">Aceptar</button>
+			 </div>
+			<!-- ........................................................... -->
+			 <div id="tbData">
+			 	<div id="div1">
+			 		<table style = "width: 100%; height: 50px; overflow-y: scroll;">
+			 			<tr>
+			 				<td style = "width: 600px;">
+			 					<p id="p1">Registros</p>
+			 				</td>
+			 				<td style = "width: 50px;">
+			 					<button id="btnListar">Listar</button>
+			 				</td>
+			 				<td style = "width: 150px;">
+			 					<form action="Reportes/SnReporte.php" method="POST"><button type="submit" id="btnPDF">Mostrar PDF</button></form>
+			 				</td>
+			 			</tr>
+			 		</table>
+			 	</div>
+			 	<hr style="margin-left: 10px; margin-right: 10px; margin-top: 5px;">
+			 	<div id="div2">
+			 		<table id="tdVals">
+			 			<th id="col1" style="width: 120px;">ID</th>
+			 			<th id="col2" style="width: 150px;">Nombre</th>
+			 			<th id="col3" style="width: 150px;">Ubicación</th>
+			 			<th id="col4" style="width: 180px;">Fecha Registrado</th>
+						<th id="col5" style="width: 100px;">Estado</th>
+			 			<!-- ........................................................... -->
+			 			
+			 		</table>		
+			 	</div>	
+			 </div>
+ 	  </article>
+	 <!-- ============================================================== -->
+  </section>
+ <!-- ============================================================== -->
+</body>
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+</html>

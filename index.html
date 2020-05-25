@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<head>
+	<meta charset="utf-8">
+	<title>Noise Pollution Monitoring</title>
+	<!--CSS personalido-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--Font Awesome para los iconos del navbar-->
+  <script src="https://kit.fontawesome.com/b1414e9ac0.js" crossorigin="anonymous"></script>
+	<!--jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+  <!--Chartjs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="js/grafics.js"></script>-->
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="js/gCharts.js"></script>
+</head>
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<body>
+<!-- ============================================================== -->
+ <!-- Barra de Navegacion -->
+  <header>
+    <nav>
+      <div id="contenedor-logo">
+        <img src="imagenes/logoblanco.png" id="logo">
+      <a id="nav-titulo" href="index.html">Sistema de Alerta de Ruido</a> 
+      </div>
+      <dir id="Contenedor-Lista-Menu">
+        <ul id="nav-enlaces">
+       <li><a id="menu_1" href="index.html"><i class="fa fa-home"></i>Inicio</a></li>
+       <li><a id="menu_2" href=""><i class="far fa-address-card"></i>Registros</a></li>
+       <li><a id="menu_3" href="PgSensores.html"><i class="fas fa-broadcast-tower"></i>Sensores</a></li>
+       <li><a id="menu_4" href="info.html"><i class="fas fa-concierge-bell"></i>Información</a> </li>
+      </ul>
+      </dir>
+  </nav>
+  </header>
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <div id="Contendor-Contenido-Principal">
+  <!-- ============================================================== -->
+    <div id="Contenedor-lista">
+      
+    </div>
+  <!-- ============================================================== -->
+    <div id="Contenedor-data">
+      <div id="Contenedor-Estado">
+        
+      </div>
+
+      <div id="Contenedor-Grafica">
+        <div id="CGdbvt"></div>
+        <canvas id="dBvTChart"></canvas>
+        <table id="tabla-resumen">
+          <tr>
+            <th id="tabla-dato">Lq(dB)</th>
+            <th id="tabla-dato">Lqe</th>
+            <th id="tabla-dato">dB max</th>
+            <th id="tabla-dato">dB min</th>
+            <th id="tabla-dato">T. de Captacion</th>
+          </tr>
+          <tr>
+            <td id="tabla-dato">erter</td>
+            <td id="tabla-dato">erter</td>
+            <td id="tabla-dato">erter</td>
+            <td id="tabla-dato">erter</td>
+            <td id="tabla-dato">erter</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- LISTA DE SENSORES REGISTRADOS 
+    <div id="C2"> -->
+    <!--<header><H2>  C2 Lista de Salones </H2></header>
+    <ol id="sList"></ol>--><!--Dentro de ol va la lista de sensores traida desde la bd con js
+    <button id="btnActualizarLista">Actualizar</button>-->
+   <!-- FIN DE LISTA DE SENSORES REGISTRADOS -->
+   <!-- =========================================================================== -->
+</body>
+<!-- ============================================================================== -->
+<!-- ============================================================================== -->
+</html>

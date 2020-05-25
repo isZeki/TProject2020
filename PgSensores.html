@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+<head>
+	<meta charset="utf-8">
+	<!--CSS personalido-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--Font Awesome para los iconos del navbar-->
+    <script src="https://kit.fontawesome.com/b1414e9ac0.js" crossorigin="anonymous"></script>
+	<!--jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- ............................................................. -->
+	<title>Registro de Sensores</title>
+	<!-- ............................................................. -->
+</head>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<body>
+ <!-- ============================================================== -->
+ <!-- Barra de Navegacion -->
+  <header>
+  	<nav>
+  	  <div id="contenedor-logo">
+  	  	<img src="imagenes/logoblanco.png" id="logo">
+	    <a id="nav-titulo" href="index.html">Sistema de Alerta de Ruido</a>	
+  	  </div>
+  	  <dir id="Contenedor-Lista-Menu">
+  	  	<ul id="nav-enlaces">
+	     <li><a id="menu_1" href="index.html"><i class="fa fa-home"></i>Inicio</a></li>
+	     <li><a id="menu_2" href=""><i class="far fa-address-card"></i>Registros</a></li>
+	     <li><a id="menu_3" href="PgSensores.html"><i class="fas fa-broadcast-tower"></i>Sensores</a></li>
+	     <li><a id="menu_4" href="info.html"><i class="fas fa-concierge-bell"></i>Información</a> </li>
+	    </ul>
+  	  </dir>
+	</nav>
+  </header>
+  <!-- ============================================================== -->	
+  <div id="Contendor-Contenido"> <!-- Contenedor de todo el contenido -->
+ 	<div id="Contenedor-Formulario"> <!-- Contenedor del Formulario -->
+	 		<div id="Formulario-Sensor">
+	 			<h3 id="Form-titulo">Formulario de Sensor</h3>
+	 			<!-- ============================================================== -->
+	 			<div id="Contenedor-Botones-Formulario">
+	 				<div id="btnAgregar"><img id="icFrm1" src="iconos/addfocus.png">
+	 					<div id="desplegar-añadir">
+	 						<label>A<br>ñ<br>a<br>d<br>i<br>r</label>
+	 					</div>
+	 				</div>
+	 				<div id="btnModificar"><img id="icFrm2" src="iconos/modify.png">
+	 					<div id="desplegar-modificar">
+	 						<label>M<br>o<br>d<br>i<br>f<br>i<br>c<br>a<br>r</label>
+	 					</div>
+	 				</div>
+	 				<div id="btnEliminar"><img id="icFrm3" src="iconos/delete.png">
+	 					<div id="desplegar-eliminar">
+	 						<label>E<br>l<br>i<br>m<br>i<br>n<br>a<br>r</label>
+	 					</div>
+	 				</div>
+	 			</div>
+	 			<!-- ============================================================== -->
+	 			<form id="formRegist" method="POST" >
+		 			<label for="idsen" id="lbl1">ID del Sensor:</label>
+		 			<img src="iconos/search.png" id="icFrmBuscar">
+		      		<input type="text" name="idsen" id="inpt1">
+		      		<div class="cont-mnsj"><span id="mnsj_id">ingrese un ID</span></div>
+		      		
+
+		      		<label for="namesen" id="lbl2">Nombre del Sensor:</label>
+		     		<input type="text" name="namesen" id="inpt2">
+		     		<div class="cont-mnsj"><span id="mnsj_mod">ingrese nombre del sensor</span></div>
+		     		 
+		            <label for="ubicsen" id="lbl3">Ubicación del Sensor:</label>
+		      		<input type="text" name="ubicsen" id="inpt3">
+		      		<div class="cont-mnsj"><span id="mnsj_del">ingrese la ubicación del sensor</span></div>
+		      	</form>
+			<!-- ============================================================== -->
+	 		</div>
+	 		<div id="Conenedot-Btn-Aceptar">
+	 			<button id="btnAceptar">Aceptar</button>
+	 		</div>	
+	</div> <!-- Fin del Contenedor de formulario -->
+	<!-- ============================================================== --> 
+	<!-- Contenedor de busqueda y tabla -->
+	<div id="Contendor-bus-tabla"> 
+	<!-- ============================================================== -->
+		<div id="Contenedor-tabla">
+			<div id="Contendor-Titulo-Botones">
+			 	<div id="CTB1">
+			 		<h3 id="TbTitulo">Registros</h3>
+			 		<input type="text" name="valsearch" id="btnBuscarSensor">	
+			 	</div>	
+			 	<!-- .................................................... -->
+			 	<div  id="CTB2">
+			 		<button id="btnListar">Listar</button>
+				 	<div id="Sensores-PDF"><img id="icPDFSen" src="iconos/pdf.png"></div>	
+			 	</div>	
+			 	<!-- <button type="submit" id="btnPDF">Mostrar PDF</button> -->
+			</div>
+			<!-- ============================================================== -->
+			<hr style="margin-left: 10px; margin-right: 10px; margin-top: 5px;">
+			<div id="Contenedor-Data">
+			 		<table id="Tabla-Data">
+			 			<thead style="display: block;">
+			 				<tr>
+			 					<th id="col1" style="width: 150px;">ID</th>
+			 					<th id="col2" style="width: 180px;">Nombre</th>
+			 					<th id="col3" style="width: 180px;">Ubicación</th>
+			 					<th id="col4" style="width: 220px;">Fecha Registrado</th>
+								<th id="col5" style="width: 120px;">Estado</th>
+			 				</tr>
+			 			</thead>	
+						<!-- ........................................................... -->
+						<tbody id="cuerpo-tablaSensor"><!--resultado del echo de php--></tbody>
+			 		</table>		
+			</div>	<!-- Fin contenedor-data -->
+		</div> <!-- Fin contenedor-tabla -->
+	</div> <!-- Fin del Contenedor de busqueda y tabla -->
+  </div> <!-- Fin contender de contenido -->
+</body>
+<!-- ======================================================================== -->
+<!-- ======================================================================== -->
+</html>
