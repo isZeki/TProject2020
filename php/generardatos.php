@@ -1,17 +1,25 @@
 <?php
 //------------------------------------------------------------------
 //-----------------DATOS DEL SERVIOR--------------------------------
-$server='sql113.tonohost.com';
+// --> Tonohost mysql server
+/*$server='sql113.tonohost.com';
 $user='ottos_25321632';
 $passw='tesis2020';
 $bd='ottos_25321632_semafbd';
+$con = new mysqli($server,$user,$passw,$bd);*/
+//_-------------------------------------------_
+// --> Freesqldatabase server
+$server = 'sql9.freesqldatabase.com';
+$user = 'sql9348729';
+$passw = 'mgnqkG81Gg';
+$bd = 'sql9348729';
 $con = new mysqli($server,$user,$passw,$bd);
 //------------------------------------------------------------------
 if ($con) {
 	date_default_timezone_get('America/Panama');
-	$fecha = date("Y-m-d H:i:s a");
+	//$fecha = date("Y-m-d H:i:s");
 	$db = rand(0,85);
-	$sql = "INSERT INTO tb_prueba_uno (ID,Fecha,dB) VALUES ('12345','$fecha','$db')";
+	$sql = "INSERT INTO tb_prueba_uno (ID,Fecha,dB) VALUES ('12345',Now(),'$db')";
 	mysqli_query($con,$sql);
 	mysqli_close($con);
 }else {
