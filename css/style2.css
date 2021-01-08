@@ -1,0 +1,462 @@
+
+*{
+	background-color: rgb(242, 243, 244);
+	margin: 0;
+	padding: 0;
+	font-family:Verdana;
+}
+
+* img{cursor: pointer;}
+
+* button{
+	cursor: pointer;
+}
+/*..................................*/
+/*.............HEADER...............*/
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(28, 40, 51);
+	display: flex;
+	align-items: center;
+}
+
+#contenedor-logo{
+	float: left;
+	width: 40%;
+	height: auto;
+	background: none;
+	margin: 0;
+	align-items: center;
+	display: flex;
+}
+#nav-titulo{
+	background: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px; 
+	text-decoration: none;
+}
+#logo{
+	background: none;
+	width: 90px;
+	height: auto;
+}
+
+#Contenedor-Lista-Menu{
+	background: none;
+	float: right;
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+	height: auto;
+}
+
+#nav-enlaces{
+	display: flex;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: rgb(28, 40, 51);
+}
+
+#nav-enlaces li{
+	list-style: none;
+	background-color: rgb(28, 40, 51);
+}
+
+#nav-enlaces li a{
+	margin: 10px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	background-color: rgb(28, 40, 51);
+	color: white;
+	font-size: 15px;
+}
+
+i{
+	background: none;
+	margin-right: 2px;
+}
+/*...........FIN HEADER.............*/
+/*===============================================================*/
+/* ====================================================================================================== */
+/* ====================================================================================================== */
+/* PAGINA INDEX */
+#Contendor-Contenido-Principal{
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+	border: solid;
+}
+
+#Contenedor-lista{
+	width: 200px;
+	height: 530px;
+	margin: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: block; 
+}
+
+.CL-botones{
+	width: 95%;
+	height: 50px;
+	color: white;
+	background-color: rgb(28, 40, 51);
+	margin: 2px;
+}
+	.CL-botones:hover{
+		background-color: white;
+		color: black;
+	}
+
+#Contenedor-data{
+	border:solid;
+	width: 100%;
+	height: auto;
+	margin:5px;
+	display: flex; 
+}
+
+#Contenedor-Estado{
+	border: solid;
+	background-color: green; 
+	width: 100px;
+	height: 100%;
+	margin: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#tabla-resumen{
+	width: 100%,
+	height:20px;
+	border: solid;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#tabla-dato{
+	border: solid;
+	width: 400px;
+	text-align: center;
+}
+
+/*------------GRAFICAS------------------*/
+/*--------------------------------------*/
+#Contenedor-Grafica{
+	border: solid;
+	/*width:600px;*/
+	width: 100%;
+	height: 350px;
+	margin:10px;
+	margin-top: 0px;
+	display: flex;
+}
+
+#CGdbvt{
+	border: solid;
+	width: 500px;
+	height: 100%;
+}
+
+#CGbarra{
+	border: solid;
+	width: 200px;
+	height: 100px;
+}
+
+/*......................................*/
+/*......................................*/
+/*......................................*/
+
+/*......................................*/
+.val_list{
+	width: 150px;
+	
+}
+/* ====================================================================================================== */
+/* ====================================================================================================== */
+/*PAGINA DE REGISTRO DE SENSORES*/
+/*..............BODY................*/
+#Contendor-Contenido{
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+}
+/*.........................*/
+/*===>Formulario...........*/
+#Form-titulo{
+	border-bottom: solid;
+	border-color: rgb(64, 64, 64);
+	margin: 5px;
+	background-color: rgb(214, 219, 223);
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#Contenedor-Formulario{
+	width: 30%;
+	height: 550px;
+	background-color: rgb(214, 219, 223);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border-radius: 10px;
+}
+
+#Formulario-Sensor{
+	background-color: rgb(214, 219, 223);
+}
+
+#Contenedor-Botones-Formulario{
+	margin: 5px;
+	display: flex;
+	justify-content: flex-end;
+	background-color: rgb(214, 219, 223);
+}
+
+#Contenedor-Botones-Formulario label{
+	background: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#btnAgregar, #btnModificar, #btnEliminar{
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	background-color: rgb(214, 219, 223);
+	border-radius: 10px;
+}
+
+#icFrm1,#icFrm2,#icFrm3{
+	width: 30px;
+	height: 30px;
+	background: none;
+	/*background-color: green;
+	border-radius: 10px;*/
+}
+
+#desplegar-añadir, #desplegar-modificar, #desplegar-eliminar{
+	text-align: center;
+	border-radius: 10px;
+	background: none;
+	display: none;
+	position: relative;
+}
+
+#desplegar-añadir{background-color: rgb(0, 230, 0);}
+#desplegar-modificar{background-color: rgb(26, 140, 255);}
+#desplegar-eliminar{background-color: rgb(255, 51, 51);}
+
+#desplegar-añadir label{font-size: 10px;}
+#desplegar-modificar label{font-size: 10px;}
+#desplegar-eliminar label{font-size: 10px;}
+
+#Conenedot-Btn-Aceptar{
+	float: right;
+	margin:10px;
+}
+
+#btnAceptar{
+	width: 90px;
+	height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(28, 40, 51);
+	border-color: rgb(51, 51, 51);
+}
+	#btnAceptar:hover{
+		background-color: white;
+		color: black;
+	}
+
+#formRegist{
+	margin: 10px;
+	padding: 5px;
+	padding-top: 50px;
+	height: 340px;
+	background: none;
+}
+
+#formRegist label{
+	background: none;
+	font-size: 18px;
+}
+
+#icFrmBuscar{
+	background: none;
+	float: right;
+	visibility: hidden;
+}
+
+#formRegist input{
+	margin-top: 5px;
+	/*margin-bottom: 30px;*/
+	border:none;
+	border-bottom: solid;
+	border-color: rgb(28, 40, 51);
+	background: none;
+	width: 100%;
+	height: 30px;
+	font-size: 15px;
+}
+
+.cont-mnsj{
+	background: none;
+	margin-bottom: 30px;
+}
+
+#mnsj_id, #mnsj_mod, #mnsj_del{
+	background: none;
+	visibility: hidden;
+	color: red;
+	font-size: 15px;
+}
+/*===> Fin Formulario......*/
+/*.........................*/
+#Contendor-bus-tabla{
+	border-radius: 10px;
+	width: 70%;
+	height: auto;
+	margin-left:15px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	background-color: rgb(214, 219, 223);
+}
+
+#Contenedor-BuscarSensor{
+	border:solid;
+	margin:10px;
+	width: auto;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+
+#Contenedor-tabla{
+	margin:10px;
+	background-color: rgb(214, 219, 223);
+}
+
+#Contendor-Titulo-Botones{
+	padding-right: 10px;
+	margin-bottom: 15px;
+	height: 30px;
+	background-color: rgb(214, 219, 223);
+}
+
+#CTB1,#CTB2{
+	display: flex;
+	align-items: center;
+	background:none;
+}
+
+#CTB1{
+	float: left;
+	width: 700px;
+	margin-left: 10px; 
+}
+
+#CTB2{
+	float: right;
+	margin-right: 5px;
+}
+
+#TbTitulo{
+	font-size: 15px;
+	background: none;
+	margin-right: 10px;
+	float: left;
+}
+
+#btnBuscarSensor{
+	width: 50px;
+	height: 40px;
+	float: left;
+  	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('../iconos/search.png');
+	background-position: 5px 5px; 
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	transition: width 0.4s ease-in-out;	
+}
+
+/*
+#btnBuscarSensor:focus {
+  width: 100%;
+}*/
+
+#Contenedor-Data{
+	margin-top: 5px;
+	height: 450px;
+	/*overflow: auto;*/
+	overflow: hidden;
+	display: block; 
+}
+
+#btnListar{
+	margin-right: 10px;
+	width: 90px;
+	height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(28, 40, 51);
+	border-color: rgb(51, 51, 51);
+}
+	#btnListar:hover{
+		background-color: white;
+		color: black;
+	}
+
+#Sensores-PDF{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+	background: none;
+}
+
+#icPDFSen{
+	visibility: hidden;
+	width: 40px;
+	height: 40px;
+	background: none;
+	margin-bottom: 10px;
+}
+
+#Tabla-Data{
+	width: 100%;
+	height: 400px;
+	border: 1px solid;
+	padding-bottom: 20px;
+	border-color: black;
+}
+
+#col1,#col2,#col3,#col4,#col5{
+	border: 1px solid;
+	border-color: black;
+	text-align: center;
+}
+
+#cuerpo-tablaSensor{
+	display: block; 
+	overflow-y: auto; 
+	height:400px;"
+}
+
+
+/*............FIN BODY..............*/
+/*===============================================================*/
+/*..........PIE DE PAGINA...........*/
+
+/*.......FIN PIE DE PAGINA..........*/
+
+

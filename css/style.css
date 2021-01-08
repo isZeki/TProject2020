@@ -39,7 +39,7 @@ nav{
 }
 #logo{
 	background: none;
-	width: 90px;
+	width: 80px;
 	height: auto;
 }
 
@@ -87,16 +87,169 @@ i{
 #Contendor-Contenido-Principal{
 	margin: 10px;
 	padding: 10px;
-	display: flex;
+	width: 1085px;
+	height: 550px;
+	/*display: flex;*/
+	/*border: solid;*/
+	float: right;
+	background-color: rgb(214, 219, 223);
+	/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/
+}
+#section-1{
 	border: solid;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	text-align: center;
+	align-content: middle;
+}
+.lblS1-1{
+	margin-top: 10px;
+	margin-left: 150px;
+	font-family:Verdana;
+	font-size: 20px;
+	color: rgb(28, 40, 51);
 }
 
-#Contenedor-lista{
-	border:solid;
-	width: 200px;
-	height: 530px;
-	margin: 10px; 
+#lblS1-Ubi{
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family:Verdana;
+	font-size: 20px;
+	color: rgb(28, 40, 51);
 }
+
+.lblS1-2{
+	margin-top: 10px;
+	margin-left: 50px;
+	font-family:Verdana;
+	font-size: 20px;
+}
+
+#DLSensores{
+	width: 150px;
+	height: 30px;
+	margin-top: 8px;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 15px;
+  	line-height: 3;
+  	background-color: rgb(28, 40, 51);
+  	color: white;
+  	overflow: hidden;
+  	border-radius: .25em;
+}
+
+#DLSensores option{
+	color: black;
+}
+
+#btnGraf{
+	background-color: rgb(28, 40, 51);
+	color: white;
+	width: 100px;
+	height: 30px;
+	font-size: 10px;
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+#CCPGraf{
+	background: none;
+	width: 100%;
+	height: 490px;
+	display: flex;
+}
+
+#section-2{
+	background-color: red;
+	background: none;
+	width: auto;
+	height: 280px;
+	display: flex;
+}
+
+#section-3{
+	background: none;
+	width: 100%;
+	height: 200px;
+}
+.cubo-estado{
+	width: 40px;
+	height: 40px;
+	margin: 5px; 
+	background-color: gray;
+}
+#Contenedor-lista{
+	width: 200px;
+	height: 560px;
+	margin: 10px;
+	float: left;
+	background-color: rgb(214, 219, 223);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	/*overflow-y: auto;*/
+	/*overflow-x: hidden;*/
+	/*display: block;*/ 
+}
+#Contenedor-lista label{
+	background: none;
+	margin-left: 5px;
+	color: rgb(28, 40, 51);
+}
+
+#CL-Title{
+	font-family:Verdana;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgb(28, 40, 51);
+	color: white;
+	border: inset;
+}
+/*#ULista{
+	width: 200px;
+	height: 60px;
+	background: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: block; 
+}*/
+
+/*#SelectUb{
+	width: 95%;
+	height: 30px;
+	margin-top: 8px;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 15px;
+  	line-height: 3;
+  	background-color: rgb(28, 40, 51);
+  	color: white;
+  	overflow: hidden;
+  	border-radius: .25em;
+}
+#SelectUb option{
+	color: black;
+}*/
+#SLista{
+	width: 200px;
+	height: 520px;
+	background: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: block; 
+}
+.CL-botones{
+	width: 95%;
+	height: 30px;
+	color: white;
+	background-color: rgb(28, 40, 51);
+	margin: 2px;
+	margin-left: 5px;
+}
+	.CL-botones:hover{
+		background-color: white;
+		color: black;
+	}
 
 #Contenedor-data{
 	border:solid;
@@ -108,26 +261,12 @@ i{
 
 #Contenedor-Estado{
 	border: solid;
+	background-color: green; 
 	width: 100px;
 	height: 100%;
 	margin: 10px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-}
-
-#Contenedor-Grafica{
-	border: solid;
-	width: 600px;
-	height: 350px;
-	margin:10px;
-	margin-top: 0px;
-}
-
-
-#CGdbvt{
-	border: solid;
-	width: 100%;
-	height: 100%;
 }
 
 #tabla-resumen{
@@ -144,26 +283,262 @@ i{
 	text-align: center;
 }
 
-
-
-/*......................................*/
-/*......................................*/
-/*......................................*/
-
-/*......................................*/
-.val_list{
-	width: 150px;
-	
-}
-/* ====================================================================================================== */
-/* ====================================================================================================== */
-/*PAGINA DE REGISTRO DE SENSORES*/
-/*..............BODY................*/
-#Contendor-Contenido{
-	margin: 10px;
-	padding: 10px;
+/*------------GRAFICAS------------------*/
+/*--------------------------------------*/
+#Contenedor-Grafica{
+	border: solid;
+	/*width:600px;*/
+	width: 100%;
+	height: 350px;
+	margin:10px;
+	margin-top: 0px;
 	display: flex;
 }
+
+#CGdbvt{
+	border: solid;
+	width: 600px;
+    height: 300px;
+	/*height: 100%;*/
+}
+
+#CGbarra{
+	border: solid;
+	width: 300px;
+	height: 200px;
+}
+
+#HCdbvt{
+	margin-top: 5px;
+	border: solid;
+	width: 700px;
+    height: 480px;
+}
+
+#HClinea{
+	margin-top: 5px;
+	margin-left: 10px;
+	border: solid;
+	width: auto;
+	height: 250px;
+}
+
+#HCBarra{
+	margin-left: 10px;
+	margin-top: 5px;
+	border: solid;
+	width: auto;
+	height: 218px;
+}
+
+/*......................................*/
+/*......................................*/
+.val_list{
+	width: 150px;	
+}
+/* ========================================================================================= */
+/* ========================================================================================= */
+/*PAGINA REGISTROS*/
+/*...............................*/
+#PR-Contenedor-Principal{
+	width: auto;
+	height: 420px;
+	margin: 10px;
+}
+#Contenedor-busqueda{
+	width: 100%;
+	height: 100px;
+}
+#CB-title{
+	width: auto;
+	height: 50px;
+	margin: 10px;
+	text-align: center;
+	border-bottom: solid;
+}
+#CB-title-ic{
+	width: auto;
+	height: 50px;
+	vertical-align: middle;
+}
+#CB-table{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(178, 186, 187);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#CB-table td{
+	width: auto;
+	text-align: center;
+	background-color: rgb(178, 186, 187);
+}
+#CB-table td label{background:none;}
+
+#CBT-texto{
+	width: 300px;
+	height: 35px;
+	box-sizing: border-box;
+	padding: 12px 20px 12px 40px;
+	background-image: url('../iconos/search.png');
+	background-position: 5px 5px; 
+	background-repeat: no-repeat;
+}
+
+#CB-icPdf{
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	background-color: rgb(28, 40, 51);
+	padding: 5px;
+	display: ;
+	border-radius: 10px;
+	margin-left: 85%;
+	/*visibility: hidden;*/
+}
+#CB-icInfo{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	background: none;
+}
+
+#meses{
+	display: none;
+	width: 130px;
+	height: 25px;
+}
+
+
+#PR-H3Result{
+ border-bottom: solid;
+ margin-bottom: 10px;
+ padding-bottom: 5px;
+ /*visibility: hidden;*/ 
+}
+
+#CB-btnBuscar{
+	width: 90px;
+	height: 30px;
+	margin: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(28, 40, 51);
+	border-color: rgb(51, 51, 51);
+}
+	#CB-btnBuscar:hover{
+		background-color: white;
+		color: black;
+	}
+
+#PR-Contenedor-Tabla{
+	width: auto;
+	height: 420px;
+	margin-top: 20px;
+	padding: 10px;
+	overflow-y: hidden;
+	visibility: hidden;
+}
+
+#PR-Tabla-Registros{
+	width: 100%;
+	height: 350px;
+	border: solid 2px;
+}
+#PR-Tabla-Registros thead{display: block;width: auto; /*background-color: rgb(28, 40, 51);*/}
+#PR-Tabla-Registros thead td{font-size: 16px;background-color: rgb(28, 40, 51); color: white;}
+#PR-Tabla-Registros tbody{
+	display: block;
+	height: 310px;
+	overflow-y: auto;
+}
+#PR-Tabla-Registros td{border: double; text-align: center;}
+#PR-Tabla-Registros tr{border: solid 2px;}
+
+/*Busqueda solamente por ID*/
+#B1-thd-c1{width: 70px;}
+#B1-thd-c2{width: 180px;}
+#B1-thd-c3{width: 195px;}
+#B1-thd-c4{width: 160px;}
+#B1-thd-c5{width: 145px;}
+#B1-thd-c6{width: 110px;}
+#B1-thd-c7{width: 110px;}
+#B1-thd-c8{width: 110px;}
+#B1-thd-c9{width: 140px;}
+/*Busqueda ID y fecha de un día*/
+/*Busqueda con Rango de Fechas*/
+#B3-thd-c1{width: 70px;}
+#B3-thd-c2{width: 140px;}
+#B3-thd-c3{width: 155px;}
+#B3-thd-c4{width: 190px;}
+#B3-thd-c5{width: 135px;}
+#B3-thd-c6{width: 100px;}
+#B3-thd-c7{width: 100px;}
+#B3-thd-c8{width: 100px;}
+#B3-thd-c9{width: 110px;}
+#B3-thd-c10{width: 120px;}
+
+.modal-contenedor{
+  display: none;  /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-contenido{
+	background-color: #fefefe;
+	margin: auto;
+	/*padding: 20px;*/
+	padding-bottom: 20px;
+	border: 1px solid #888;
+	width: 50%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.modal-contenido p{background: none; text-align: justify; margin: 20px;}
+.modal-contenido ul{ margin: 20px; background: none;}
+.modal-contenido ul li{background: none; margin: 20px;}
+.modal-contenido ul li b{background: none;}
+
+.close-modal{
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	background: none;
+	cursor: pointer;
+	margin: 20px;
+}
+.close-modal:hover,
+.close-modal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-d1{
+	display: flex;
+	width: 100%; 
+	float: left;
+	background-color: rgb(44, 62, 80);
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+#modal-d1 h2{width: 95%;background: none; margin: 20px; color: white;}
+/* ========================================================================================= */
+/* ========================================================================================= */
+/*PAGINA DE REGISTRO DE SENSORES*/
+/*..............BODY................*/
+#Contendor-Contenido{margin: 10px; padding: 10px; display: flex;}
 /*.........................*/
 /*===>Formulario...........*/
 #Form-titulo{
@@ -177,7 +552,7 @@ i{
 }
 
 #Contenedor-Formulario{
-	width: 30%;
+	width: 25%;
 	height: 550px;
 	background-color: rgb(214, 219, 223);
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -213,8 +588,24 @@ i{
 	width: 30px;
 	height: 30px;
 	background: none;
-	/*background-color: green;
-	border-radius: 10px;*/
+}
+
+#inpt2,#inpt3,#lbl2,#lbl3{
+	visibility: hidden;
+}
+
+#icFrmBuscar{
+	background: none;
+	float: right;
+	visibility: visible;
+}
+
+#FR-Select{
+	display: none;
+	width: 100%;
+	height: 30px;
+	border-color: rgb(28, 40, 51);
+	border-width: 3px; 
 }
 
 #desplegar-añadir, #desplegar-modificar, #desplegar-eliminar{
@@ -265,12 +656,6 @@ i{
 	font-size: 18px;
 }
 
-#icFrmBuscar{
-	background: none;
-	float: right;
-	visibility: hidden;
-}
-
 #formRegist input{
 	margin-top: 5px;
 	/*margin-bottom: 30px;*/
@@ -298,7 +683,7 @@ i{
 /*.........................*/
 #Contendor-bus-tabla{
 	border-radius: 10px;
-	width: 70%;
+	width: 80%;
 	height: auto;
 	margin-left:15px;
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -313,7 +698,6 @@ i{
 	display: flex;
 	align-items: center;
 }
-
 
 #Contenedor-tabla{
 	margin:10px;
@@ -379,9 +763,11 @@ i{
 	overflow: hidden;
 	display: block; 
 }
-
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*----checkbox-boton listar-boton pdf----*/
 #btnListar{
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	width: 90px;
 	height: 30px;
 	font-size: 15px;
@@ -400,6 +786,22 @@ i{
 	height: 30px;
 	margin-bottom: 10px;
 	background: none;
+}
+
+#btnSF{
+	width: 30px;
+	height: 32px;
+	background: none;
+	border:none;
+	/*background-color: rgb(28, 40, 51);
+	border-color: rgb(51, 51, 51);*/
+	margin-left: 5px; 
+}
+
+#icSF{
+	background: none;
+	width: 40px;
+	height: 30px;
 }
 
 #icPDFSen{
