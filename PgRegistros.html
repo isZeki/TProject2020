@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Noise Pollution Monitoring</title>
+	<!--CSS personalido-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--Font Awesome para los iconos del navbar-->
+  	<script src="https://kit.fontawesome.com/b1414e9ac0.js" crossorigin="anonymous"></script>
+	<!--jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script_r.js"></script>
+</head>
+<body>
+  <!-- Barra de Navegacion -->
+  <header>
+    <nav>
+      <div id="contenedor-logo">
+        <img src="imagenes/logoblanco.png" id="logo">
+      	<a id="nav-titulo" href="index.html">Sistema de Alerta de Ruido</a> 
+      </div>
+      <dir id="Contenedor-Lista-Menu">
+       <ul id="nav-enlaces">
+       <li><a id="menu_1" href="index.html"><i class="fa fa-home"></i>Inicio</a></li>
+       <li><a id="menu_2" href="PgRegistros.html"><i class="far fa-address-card"></i>Registros</a></li>
+       <li><a id="menu_3" href="PgSensores.html"><i class="fas fa-broadcast-tower"></i>Sensores</a></li>
+       <li><a id="menu_4" href="info.html"><i class="fas fa-concierge-bell"></i>Información</a> </li>
+      </ul>
+      </dir>
+  </nav>
+  <div class="modal-contenedor">
+  	<div class="modal-contenido">
+  		<div id="modal-d1">
+  			<h2>Como realizar la consulta</h2>
+  			<span class="close-modal">&times;</span>
+  		</div>
+  		<p>Para realizar la busqueda de un registro o diversos registros puede hacerlo mediante
+  			las siguiente opciones:
+  		</p>
+  		<ul>
+  			<li><b>Opción "Dia":</b> Ingresar ID del sensor y/o fecha del dia especifico a consultar.</li>
+  			<li><b>Opción "Mes/Año":</b> Ingresar ID del sensor, mes, año. Puede ingresar solamente uno de los datos o combinacion de dos o tres</li>
+  			<li><b>Opción "Rango":</b> Ingresar ID del sensor y/o rango de fechas.</li>
+  		</ul>
+  		<p>
+  			En cada una de las opciones se puede ingresar solamente el ID o uno de los datos que se muestran, al igual que se pueden ingresar tanto ID como el resto de datos de la opcion seleccionada.
+  		</p>
+  	</div>
+  </div>
+  </header>
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <div id="PR-Contenedor-Principal">
+  	<div id="Contenedor-busqueda">
+  	<h1 id="CB-title"><img id="CB-title-ic" src="iconos/carpeta.png"></img>SAR Registros Generales</h1>
+  	<table id="CB-table">
+  		<td><input id="CBT-texto" type="text" name="" placeholder="Ingrese ID o Nombre del Sensor"></input></td>
+  		<td>
+  			<label id="PR-lb1">Fecha inicio:</label>
+  			<input id="PR-Fi" type="date">
+        <!--Select aparece cuando se selecciona la opcion mes reemplazando el input-->
+        <select id="meses">
+          <option value=""></option>
+          <option value="Enero">Enero</option>
+          <option value="Febrero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="Junio">Junio</option>
+          <option value="Julio">Julio</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Septiembre">Septiembre</option>
+          <option value="Octubre">Octubre</option>
+          <option value="Noviembre">Noviembre</option>
+          <option value="Diciembre">Diciembre</option>
+        </select>
+  			<label id="PR-lb2">Fecha final:</label>
+  			<input id="PR-Ff" type="date" name="">
+  			<!--<input id="PR-CHKL" list="meses" name="">-->
+  		</td>
+  		<td>
+  			<input id="rdD" type="radio" name="rdck" >Día</input>
+  			<input id="rdMA" type="radio" name="rdck">Mes/Año</input>
+  			<input id="rdR" type="radio" name="rdck" checked="true">Rango</input>
+  			<!--<input id="rdA" type="radio" name="rdck">Año</input>-->
+  			
+  		</td>
+  		<td>
+  			<button id="CB-btnBuscar">Buscar</button>
+  			<img id="CB-icInfo" src="iconos/pregunta.png">
+  		</td>
+  	</table>
+  </div>
+  <div id="PR-Contenedor-Tabla">
+  	<h3 id="PR-H3Result">Resultados: <img id="CB-icPdf" src="iconos/pdf.png"></h3>
+  	<table id="PR-Tabla-Registros">
+  		<thead id="PR-TR-THD">
+  			<!--Contenido establecido por php-->
+  		</thead>
+  		<tbody id="PR-TR-TBD">
+  			<!--Contenido establecido por php-->
+  		</tbody>
+  	</table>
+  </div>
+ </div>
+</body>
+</html>
